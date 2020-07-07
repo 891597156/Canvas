@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-创建线条</title>
+</head>
+<style>
+    canvas{float:left;margin:20px;border:1px solid #ccc}
+</style>
+<body>
+    <h1>一条直线绘制</h1>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById('canvas');
+            canvas.width = 500;
+            canvas.height = 500;
+            
+            var context = canvas.getContext('2d'); //使用context 进行绘制
+
+            context.moveTo(50,50); //canvas绘制的起点
+            context.lineTo(450,450); //canvas绘制的终点
+            context.lineWidth = 10; //canvas绘制的宽度
+            context.strokeStyle='#058'; //canvas绘制的颜色,注意需要放置在绘制方法前面
+            context.stroke();
+           
+        }
+    </script>
+    <canvas id="canvas1"></canvas>
+    <script>
+        var canvas1 = document.getElementById('canvas1');
+        canvas1.width = 500;
+        canvas1.height = 500;
+
+        var context1 = canvas1.getContext('2d');
+
+        context1.moveTo(50,50);
+        context1.lineTo(450,250);
+        context1.lineTo(50,250)
+
+        context1.lineWidth = 10;
+        context1.strokeStyle = "#487556"
+
+        context1.stroke();
+    </script>
+
+<canvas id="canvas2"></canvas>
+<script>
+    var canvas2 = document.getElementById('canvas2');
+    canvas2.width = 500;
+    canvas2.height = 500;
+
+    var context2 = canvas2.getContext('2d');
+
+    context2.moveTo(100,150);
+    context2.lineTo(300,150);
+    context2.lineTo(300,50);
+    context2.lineTo(400,200);
+    context2.lineTo(300,350);
+    context2.lineTo(300,250);
+    context2.lineTo(100,250);
+
+    context2.lineWidth = 10;
+    context2.strokeStyle = "#487556"
+
+    context2.stroke();
+</script>
+
+<canvas id="canvas3"></canvas>
+<script>
+    var canvas2 = document.getElementById('canvas3');
+    canvas2.width = 500;
+    canvas2.height = 500;
+
+    var context3 = canvas3.getContext('2d');
+
+    context3.moveTo(100,50);
+    context3.lineTo(150,200);
+    context3.lineTo(100,350);
+
+    context3.moveTo(150,50);
+    context3.lineTo(200,200);
+    context3.lineTo(150,350);
+
+    context3.moveTo(200,50);
+    context3.lineTo(250,200);
+    context3.lineTo(200,350);
+
+    context3.lineWidth = 10;
+    context3.strokeStyle = "#487556"
+
+    context3.stroke();
+</script>
+
+</body>
+</html>
